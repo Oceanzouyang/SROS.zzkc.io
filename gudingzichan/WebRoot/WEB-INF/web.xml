@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 配置struts2过滤器 -->
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class>  
+  </filter>
+  
+  <filter-mapping>
+     <filter-name>struts2</filter-name>
+     <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserLogin</servlet-name>
+    <servlet-class>com.yatai.util.UserLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FenyeServlet</servlet-name>
+    <servlet-class>com.yatai.util.FenyeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryName</servlet-name>
+    <servlet-class>com.yatai.util.QueryName</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ResultServlet</servlet-name>
+    <servlet-class>com.yatai.util.ResultServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CreateFileServlet</servlet-name>
+    <servlet-class>com.yatai.util.CreateFileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>registerServlet</servlet-name>
+    <servlet-class>com.yatai.util.registerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShenheServlet</servlet-name>
+    <servlet-class>com.yatai.util.ShenheServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>weixin</servlet-name>
+    <servlet-class>com.yatai.util.weixin</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryNameLike</servlet-name>
+    <servlet-class>com.yatai.util.QueryNameLike</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryTypeLike</servlet-name>
+    <servlet-class>com.yatai.util.QueryTypeLike</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryMaxZichanid</servlet-name>
+    <servlet-class>com.yatai.util.QueryMaxZichanid</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AjaxQueryTypedan</servlet-name>
+    <servlet-class>com.yatai.util.AjaxQueryTypedan</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AjaxAddTypedan</servlet-name>
+    <servlet-class>com.yatai.util.AjaxAddTypedan</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AjaxZhuanyiTypedan</servlet-name>
+    <servlet-class>com.yatai.util.AjaxZhuanyiTypedan</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AjaxQueryZhuanyi</servlet-name>
+    <servlet-class>com.yatai.util.AjaxQueryZhuanyi</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AjaxQueryWeixiu</servlet-name>
+    <servlet-class>com.yatai.util.AjaxQueryWeixiu</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AjaxQueryChuzhi</servlet-name>
+    <servlet-class>com.yatai.util.AjaxQueryChuzhi</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AjaxWeixiuTypedan</servlet-name>
+    <servlet-class>com.yatai.util.AjaxWeixiuTypedan</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AjaxChuzhiTypedan</servlet-name>
+    <servlet-class>com.yatai.util.AjaxChuzhiTypedan</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AjaxDelete</servlet-name>
+    <servlet-class>com.yatai.util.AjaxDelete</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DownloadDanju</servlet-name>
+    <servlet-class>com.yatai.util.DownloadDanju</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>UserLogin</servlet-name>
+    <url-pattern>/UserLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FenyeServlet</servlet-name>
+    <url-pattern>/FenyeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryName</servlet-name>
+    <url-pattern>/QueryName</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ResultServlet</servlet-name>
+    <url-pattern>/ResultServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateFileServlet</servlet-name>
+    <url-pattern>/CreateFileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>registerServlet</servlet-name>
+    <url-pattern>/registerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShenheServlet</servlet-name>
+    <url-pattern>/ShenheServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>weixin</servlet-name>
+    <url-pattern>/weixin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryNameLike</servlet-name>
+    <url-pattern>/QueryNameLike</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryTypeLike</servlet-name>
+    <url-pattern>/QueryTypeLike</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryMaxZichanid</servlet-name>
+    <url-pattern>/QueryMaxZichanid</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxQueryTypedan</servlet-name>
+    <url-pattern>/AjaxQueryTypedan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxAddTypedan</servlet-name>
+    <url-pattern>/AjaxAddTypedan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxZhuanyiTypedan</servlet-name>
+    <url-pattern>/AjaxZhuanyiTypedan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxQueryZhuanyi</servlet-name>
+    <url-pattern>/AjaxQueryZhuanyi</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxQueryWeixiu</servlet-name>
+    <url-pattern>/AjaxQueryWeixiu</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxQueryChuzhi</servlet-name>
+    <url-pattern>/AjaxQueryChuzhi</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxWeixiuTypedan</servlet-name>
+    <url-pattern>/AjaxWeixiuTypedan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxChuzhiTypedan</servlet-name>
+    <url-pattern>/AjaxChuzhiTypedan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxDelete</servlet-name>
+    <url-pattern>/AjaxDelete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadDanju</servlet-name>
+    <url-pattern>/DownloadDanju</url-pattern>
+  </servlet-mapping>  
+</web-app>

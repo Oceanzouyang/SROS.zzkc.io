@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "struts-2.0.dtd">
+
+<struts>
+ <!-- web应用的默认编码集 -->
+ <constant name="struts.i18n.encoding" value="GBK"></constant>
+ <!-- 请求后缀 -->
+ <constant name="struts.action.extension" value="action,do"></constant>
+ <!--  web应用的默认Locale-->
+ <constant name="struts.locale" value="zh_CN"></constant>
+ <!-- 是否使用开发模式 -->
+ <constant name="struts.devMode" value="flase"></constant>
+ 
+  <!-- 业务控制器配置 -->
+ <package name="zichan" extends="struts-default">
+   <action name="show" method="showAction" class="com.yatai.action.ZichanAction">
+     <result name="success">/index.jsp</result>
+   </action>
+   <!-- 单个添加获取部门 -->
+   <action name="add" method="addAction" class="com.yatai.action.ZichanAction">
+      <result name="success">/add.jsp</result> 
+   </action>
+   
+   <!-- 单个添加资产类别 -->
+   <action name="addType" method="addTypeAction" class="com.yatai.action.ZichanAction">
+      <result name="success">/type.jsp</result> 
+   </action>
+   
+   <!-- 批量添加获取部门 -->
+   <action name="addPiliang" method="addPiliangAction" class="com.yatai.action.ZichanAction">
+      <result name="success">/addPiliang.jsp</result> 
+   </action>
+   
+   <!-- 单个添加 -->
+   <action name="executeAdd" method="executeAddAction" class="com.yatai.action.ZichanAction">
+       <result name="success">/FenyeServlet</result>
+   </action>
+      <!-- 批量添加 -->
+   <action name="executePiliangAdd" method="executePiliangAddAction" class="com.yatai.action.ZichanAction">
+       <result name="success">/FenyeServlet</result>
+   </action>
+   
+   <action name="querylike" method="querylikeNameAction" class="com.yatai.action.ZichanAction">
+       <result name="success">/zichaninfo.jsp</result>
+   </action>
+     <action name="queryTypeLike" method="QueryZichanTypeSqlwhere" class="com.yatai.action.ZichanAction">
+       <result name="success">/add.jsp</result>
+   </action>   
+   <action name="update" method="updateAction" class="com.yatai.action.ZichanAction">
+       <result name="success">/update.jsp</result>
+   </action>
+   <action name="executeUpdate" method="executeUpdateAction" class="com.yatai.action.ZichanAction">
+       <result name="success">/FenyeServlet</result>
+   </action>
+   <action name="delete" method="deleteAction" class="com.yatai.action.ZichanAction">
+       <result name="success">/zichaninfo.jsp</result>
+   </action>
+   <action name="shenhe" method="shenheAction" class="com.yatai.action.ZichanAction">
+       <result name="success">/FenyeServlet</result>
+   </action>
+   <action name="cancelShenhe" method="cancelShenheAction" class="com.yatai.action.ZichanAction">
+       <result name="success">/FenyeServlet</result>
+   </action>
+   <action name="baoxiao" method="baoxiaoAction" class="com.yatai.action.ZichanAction">
+       <result name="success">/baoxiaoUpdate.jsp</result>
+   </action>
+   <action name="executeBaoxiao" method="executeBaoxiaoAction" class="com.yatai.action.ZichanAction">
+       <result name="success">/zichaninfo.jsp</result>
+   </action>
+   <action name="executeBaoxiaoAll" method="executeBaoxiaoAllAction" class="com.yatai.action.ZichanAction">
+       <result name="success">/zichaninfo.jsp</result>
+   </action>
+   <action name="showDept" method="showDeptAction" class="com.yatai.action.ZichanAction">
+      <result name="success">/dept.jsp</result> 
+   </action>
+   <action name="showType" method="showTypeAction" class="com.yatai.action.ZichanAction">
+      <result name="success">/type.jsp</result> 
+   </action>
+   <action name="addDept" method="addDeptAction" class="com.yatai.action.ZichanAction">
+      <result name="success">/dept.jsp</result> 
+   </action>
+   <action name="updateDept" method="updateDeptAction" class="com.yatai.action.ZichanAction">
+      <result name="success">/updateDept.jsp</result> 
+   </action>
+   <action name="updateType" method="updateTypeAction" class="com.yatai.action.ZichanAction">
+      <result name="success">/updateType.jsp</result> 
+   </action>
+   <action name="executeDeptUpdate" method="executeDeptUpdateAction" class="com.yatai.action.ZichanAction">
+      <result name="success">/dept.jsp</result> 
+   </action>
+   <action name="executeTypeUpdate" method="executeTypeUpdateAction" class="com.yatai.action.ZichanAction">
+      <result name="success">/type.jsp</result> 
+   </action>
+   <action name="deleteDept" method="deleteDeptAction" class="com.yatai.action.ZichanAction">
+      <result name="success">/dept.jsp</result> 
+   </action>
+   <action name="deleteType" method="deleteTypeAction" class="com.yatai.action.ZichanAction">
+      <result name="success">/type.jsp</result> 
+   </action>
+   <action name="updateAll" method="executeUpdateAllAction" class="com.yatai.action.ZichanAction">
+       <result name="success">/FenyeServlet</result>
+   </action>
+ </package>
+ 
+    <!-- 资产流转单操作 -->
+ <package name="typedan" extends="struts-default">
+ 	<action  name="addTypedan" method="addTypedanAction" class="com.yatai.action.TypedanAction">
+   		<result name="success">/resultinfo.jsp</result>
+    </action>
+    <action  name="queryTypedan" method="QueryTypedansqlwhere" class="com.yatai.action.TypedanAction">
+   		<result name="success">/resultinfo.jsp</result>
+    </action>
+ </package>
+ 
+   <package name="user" extends="struts-default">
+   <action name="show" method="showAction" class="com.yatai.action.UserAction">
+     <result name="success">/userinfo.jsp</result>
+   </action>
+   <action name="deleteUser" method="deleteAction" class="com.yatai.action.UserAction">
+       <result name="success">/userinfo.jsp</result>
+   </action>
+   <action name="updateUser" method="updateAction" class="com.yatai.action.UserAction">
+       <result name="success">/updateUser.jsp</result>
+   </action>
+   <action name="executeUserUpdate" method="executeUserUpdateAction" class="com.yatai.action.UserAction">
+       <result name="success">/userinfo.jsp</result>
+   </action>
+   <action name="executeCommonUserUpdate" method="executeCommonUserUpdateAction" class="com.yatai.action.UserAction">
+       <result name="success">/login.jsp</result>
+   </action>
+   <action name="addUser" method="addAction" class="com.yatai.action.UserAction">
+      <result name="success">/administrator.jsp</result> 
+   </action>
+   <action name="updateChoose" method="updateChooseAction" class="com.yatai.action.UserAction">
+       <result name="success">/userChoose.jsp</result>
+   </action>
+   <action name="executeUpdateChoose" method="executeUpdateChooseAction" class="com.yatai.action.UserAction">
+       <result name="success">/userinfo.jsp</result>
+   </action>
+ </package>
+ </struts>
+
+    
+
+    
